@@ -141,7 +141,7 @@ const MarioGame = ({reload}) => {
         setVelocity(prev => ({ ...prev, y: prev.y + gravity }));
 
         // Check platform collisions
-        let onPlatform = false;
+        //let onPlatform = false;
         platforms.forEach(platform => {
           if (newPos.x + 40 > platform.x &&
               newPos.x < platform.x + platform.width &&
@@ -150,7 +150,7 @@ const MarioGame = ({reload}) => {
             newPos.y = platform.y - 40;
             setVelocity(prev => ({ ...prev, y: 0 }));
             setIsJumping(false);
-            onPlatform = true;
+            //onPlatform = true;
           }
         });
 
