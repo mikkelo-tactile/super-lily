@@ -187,15 +187,16 @@ const MarioGame = ({reload}) => {
     <>
     {score === 30 ?  
       <div 
-        className={'h-96 w-full bg-sky-100 flex flex-col items-center justify-center cursor-pointer'}
+        className={'relative z-2 h-[26rem]  w-full flex flex-col items-center justify-center cursor-pointer'}
         onClick={() => reload(Math.random())}
       >
-        <h1>You won!!</h1>
-        <h2>Click to play again</h2>
+        
+        <img className={'z-1 absolute object-cover top-0 w-full h-full'} src="/SuperLily_end.jpg" alt="end card"></img>
+        <h1 className={'z-2 text-3xl absolute bottom-4 text-white font-bold'}>Click to play again</h1>
       </div>
       
     :
-    <div className="relative w-full h-96 bg-sky-200 overflow-hidden border-4 border-gray-800 rounded-lg">
+    <div className="relative w-full h-[26rem]  bg-sky-200 overflow-hidden border-4 border-gray-800 rounded-lg">
       {/* Score */}
       <div className="absolute top-4 left-4 text-xl font-bold">
         Score: {score}
